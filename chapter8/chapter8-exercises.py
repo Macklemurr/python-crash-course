@@ -203,8 +203,6 @@ print(queued_texts, sent_texts)
 
 # 8-12 Sandwiches
 """
-"""
-
 def sandwich(*toppings):
     print(f"\n Making a sandwich with: ")
     for topping in toppings:
@@ -213,6 +211,97 @@ def sandwich(*toppings):
 sandwich('roast beef','lettuce','mayo')
 sandwich('ham','turkey', 'mustard')
 sandwich('bbq', 'chicken')
+"""
+
+# 8-13 User Profile
+"""
+def build_profile(first, last, **user_info):
+    #build a dictionary containing everything we know about a user
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('Austin', 'Bell',
+                             location='Northern Virginia',
+                             field='IT',
+                             hobbies='linux, video games')
+print(user_profile) 
+"""
+
+# 8-14 Cars
+"""
+def make_car(manufacturer, model, **features):
+	car_dict = {
+		'manufacturer': manufacturer.title(),
+		'model': model.title(),
+	}
+	
+	for features, value in features.items():
+		car_dict[features] = value
+		
+	return car_dict
+	
+my_outback = make_car('subaru', 'outback', color='blue', bluetooth=True)
+
+print(my_outback)
+
+my_toyota = make_car('toyota', 'corolla', AC=True, mpg=25)
+
+print(my_toyota)
+"""
+
+# 8-15 Printing Models
+"""
+import printing_models as pm
+from printing_models import print_models, show_completed_models 
+
+unprinted_designs = [ 'toycar', 'spaceship', 'rocket' ]
+completed_models = []
+
+pm.print_models(unprinted_designs, completed_models)
+pm.show_completed_models(completed_models)
+"""
+
+# 8-16 Imports
+"""
+import cars
+
+my_subaru = cars.make_car('subaru', 'outback', bluetooth=True, doors=4)
+print(my_subaru)
+
+from cars import make_car
+
+my_toyota = make_car('toyota', 'corolla', seats=4)
+print(my_toyota)
+
+
+from cars import make_car as mc
+
+my_car = mc('toyota', 'corolla', color='blue')
+print(my_car)
+
+
+
+import cars as c
+from cars import *
+my_car = c.make_car('toyota', 'corolla', color='blue')
+print(my_car)
+"""
+
+# 8-17 Styling Functions
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     
 
